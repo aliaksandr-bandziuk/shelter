@@ -1,4 +1,76 @@
-/* @import "main.scss"; */
+$color-primary-color: #f1cdb3;
+$color-primary-light: #fddcc4;
+
+$color-light-s: #fafafa;
+$color-light-l: #f6f6f6;
+$color-light-xl: #ffffff;
+
+$color-dark-s: #cdcdcd;
+$color-dark-m: #b2b2b2;
+$color-dark-l: #545454;
+$color-dark-xl: #4c4c4c;
+$color-dark-2xl: #444444;
+$color-dark-3xl: #292929;
+
+
+@mixin h2 {
+   font: {
+      family: Georgia;
+      size: 4.4rem;
+      weight: 400;
+   }
+   line-height: 130%;
+} 
+
+@mixin large-text {
+   font: {
+      family: Arial;
+      size: 20px;
+      weight: bold;
+   }
+   color: #ff0000;
+}
+
+@mixin h3 {
+   font: {
+      family: Georgia;
+      style: normal;
+      weight: normal;
+      size: 3.5rem;
+   }
+   line-height: 130%;
+   letter-spacing: 0.06em;
+}
+
+@mixin h4 {
+   font: {
+      family: Georgia;
+      style: normal;
+      weight: normal;
+      size: 3.5rem;
+   }
+   line-height: 115%;
+   letter-spacing: 0.06em;
+}
+
+@mixin h5 {
+   font: {
+      family: Georgia;
+      style: normal;
+      weight: normal;
+      size: 1.5rem;
+   }
+   line-height: 110%;
+   letter-spacing: 0.06em;
+}
+
+:root {
+   font-size: 10px;
+}
+
+.icon {
+   padding: 0 12rem;
+}
 
 * {
    margin: 0;
@@ -113,12 +185,9 @@ a {
 }
 
 .content-section__title {
-   color: #FFFFFF;
-   font-size: 2.75rem; /* или 44px */
-   line-height: 130%;
-   font-family: Georgia;
-   max-width: 19.375rem; /* или 42px */
-   font-weight: 400;
+   max-width: 31rem;
+   color: $color-light-xl;
+   @include h2;
 
    /* 
    color: #FFFFFF;
