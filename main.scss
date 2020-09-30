@@ -265,6 +265,8 @@ a {
 
 .about {
    display: flex;
+   padding-top: 8rem;
+   padding-bottom: 10rem;
 
    &__image-wrapper {
       display: flex;
@@ -272,6 +274,24 @@ a {
 
    &__image {
       width: 100%;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      max-width: 43rem;
+   }
+
+   &__title {
+      color: $color-dark-l;
+      @include h3;
+   }
+
+   &__description {
+      p {
+         color: $color-dark-xl;
+         @include paragraph-l;
+      }
    }
 }
 
