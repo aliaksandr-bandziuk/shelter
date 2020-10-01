@@ -3,10 +3,6 @@
   font-size: 10px;
 }
 
-.icon {
-  padding: 0 12rem;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +15,9 @@
 .wrapper {
   display: flex;
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 1200px;
   /* или попробовать тут 1200px */
+  flex: 1;
   justify-content: space-between;
 }
 
@@ -29,15 +26,20 @@
 } */
 .header {
   width: 100vw;
+  max-width: 100%;
   position: absolute;
-  top: 60px;
+  top: 6rem;
+}
+
+.menu {
+  width: 44.3rem;
+  display: flex;
 }
 
 .logo {
   display: flex;
   flex-direction: column;
 }
-
 .logo__title {
   color: #f1cdb3;
   font-family: Georgia;
@@ -47,19 +49,16 @@
   line-height: 110%;
   letter-spacing: 0.06em;
 }
-
 .logo__subtitle {
-  margin-top: 10px;
-  color: #FFFFFF;
-  font-size: 13px;
-  line-height: 110%;
+  margin-top: 1rem;
+  color: #ffffff;
   text-align: center;
-  letter-spacing: 0.1rem;
-}
-
-.menu {
-  display: flex;
-  width: 443px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 110%;
+  letter-spacing: 0.1em;
 }
 
 a {
@@ -67,32 +66,27 @@ a {
 }
 
 .list {
-  display: flex;
-  /* margin: 0;
-  padding: 0; */
-  list-style-type: none;
   width: 100%;
+  display: flex;
+  list-style-type: none;
   justify-content: space-between;
 }
-
-.list__item {
+.list .list__item {
   display: flex;
   align-items: center;
 }
-
-.list__link {
+.list .list__item .list__link {
   color: #ffffff;
   font-family: Arial;
-  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: 400;
   line-height: 160%;
 }
-
-.list-link_active {
-  border-bottom: solid 3px #F1CDB3;
+.list .list__item .list__link_active {
+  border-bottom: solid 0.3rem #f1cdb3;
 }
-
-.list__link_disabled {
-  color: #CDCDCD;
+.list .list__item .list__link_disabled {
+  color: #cdcdcd;
 }
 
 .main {
@@ -101,22 +95,30 @@ a {
 }
 
 .hero {
-  padding-top: 180px;
   display: flex;
+  padding-top: 18rem;
   background: url(/assets/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
-
 .hero__content {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+}
+.hero__image-wrapper {
+  display: flex;
+}
+.hero__image {
+  max-width: 69.8rem;
+  max-height: 72.8rem;
 }
 
 .content-section {
+  padding-bottom: 8rem;
+  max-width: 46.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 84px;
 }
-
 .content-section__title {
   max-width: 31rem;
   color: #ffffff;
@@ -125,21 +127,77 @@ a {
   font-weight: 400;
   line-height: 130%;
 }
-
 .content-section__subtitle {
-  margin-top: 2.625rem;
-  /* или 42px */
-  color: #CDCDCD;
+  margin-top: 4.2rem;
+  font-size: 1.5rem;
+  color: #cdcdcd;
   line-height: 160%;
   font-family: Arial;
-  font-size: 15px;
+}
+.content-section__button {
+  padding: 1.5rem 4.5rem;
+  margin-top: 4rem;
+  font-size: 1.7rem;
+  background-color: #f1cdb3;
+  border-radius: 10rem;
+  line-height: 130%;
+  letter-spacing: 0.11rem;
+  width: 21rem;
+  border: none;
 }
 
-.content-section__button {
-  padding: 15px 45px;
-  width: 207px;
-  border-radius: 100px;
-  border: none;
-  background-color: #F1CDB3;
-  margin-top: 42px;
+.about {
+  display: flex;
+}
+.about .wrapper {
+  justify-content: center;
+}
+.about__image-wrapper {
+  display: flex;
+}
+.about__image {
+  width: 100%;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 43rem;
+}
+.about__title {
+  color: #545454;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+.about__description {
+  margin-top: 2.5rem;
+}
+.about__description p {
+  color: #4c4c4c;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+.about__description p:nth-child(2) {
+  margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    padding: 0 4rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .hero__content {
+    flex-direction: center;
+  }
+
+  .hero__content {
+    align-items: center;
+  }
 }
